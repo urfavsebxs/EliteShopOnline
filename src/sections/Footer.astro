@@ -1,0 +1,105 @@
+---
+import Logo from '@/assets/EliteShopOnline.webp';
+import Instagram from '@/icons/Instagram.astro';
+import TikTok from '@/icons/TikTok.astro';
+import WhatsApp from '@/icons/WhatsApp.astro';
+import Signature from '@/icons/Signature/Signature.png';
+
+const socialIcons = {
+    TikTok,
+    Instagram,
+    WhatsApp
+}
+---
+
+<footer>
+    <div class="w-full bg-[#E75A3F] text-white py-6">
+        <div class="max-w-7xl mx-auto px-6">
+
+            <!-- TOP SECTION: ALL COLUMNS IN A ROW -->
+            <div class="flex justify-between items-start mb-6 px-8">
+                
+                <!-- COLUMN 1: LOGO + NAME + SLOGAN + CONTACT -->
+                <div class="flex flex-col">
+                    <div class="flex items-center mb-3">
+                        <img src={Logo.src} alt="Logo" class="w-16 h-16 -ml-4" />
+                        <span class="font-ecommerce text-4xl ml-3 mt-1.5">EliteShopOnline</span>
+                    </div>
+                    <p class="text-sm mb-4">TU TIENDA DE CONFIANZA #1 DE COLOMBIA</p>
+                    <p class="text-sm mb-1"><span class="font-bold">NÚMERO:</span> +57 3229286047</p>
+                    <p class="text-sm -mt-1"><span class="font-bold">CORREO:</span> ELITESHOPONLINE@GMAIL.COM</p>
+                </div>
+
+                <!-- COLUMN 2: TE PUEDE INTERESAR -->
+                <div class="flex flex-col" style="align-items: flex-start;">
+                    <h3 class="font-bold text-base mb-2" style="text-align: left;">TE PUEDE INTERESAR</h3>
+                    <ul class="list-none space-y-0.5 text-xs" style="text-align: left; padding: 0; margin: 0;">
+                        <li style="text-align: left;"><a class="no-underline text-white hover:underline" href="">GYM Y SALUD FÍSICA</a></li>
+                        <li style="text-align: left;"><a class="no-underline text-white hover:underline" href="">ROPA Y ACCESORIOS</a></li>
+                        <li style="text-align: left;"><a class="no-underline text-white hover:underline" href="">TARJETAS DE REGALO</a></li>
+                        <li style="text-align: left;"><a class="no-underline text-white hover:underline" href="">TECNOLOGIA</a></li>
+                    </ul>
+                </div>
+
+                <!-- COLUMN 3: NUESTRAS MARCAS -->
+                <div class="flex flex-col" style="align-items: flex-start;">
+                    <h3 class="font-bold text-base mb-2" style="text-align: left;">NUESTRAS MARCAS</h3>
+                    <ul class="list-none space-y-0.5 text-xs" style="text-align: left; padding: 0; margin: 0;">
+                        <li style="text-align: left;"><a class="no-underline text-white hover:underline" href="">HERBALIFE</a></li>
+                        <li style="text-align: left;"><a class="no-underline text-white hover:underline" href="">KOAJ</a></li>
+                        <li style="text-align: left;"><a class="no-underline text-white hover:underline" href="">XBOX - PS5</a></li>
+                        <li style="text-align: left;"><a class="no-underline text-white hover:underline" href="">ASUS</a></li>
+                    </ul>
+                </div>
+
+                <!-- COLUMN 4: AYUDA Y ASISTENCIA -->
+                <div class="flex flex-col" style="align-items: flex-start;">
+                    <h3 class="font-bold text-base mb-2" style="text-align: left;">AYUDA Y ASISTENCIA</h3>
+                    <ul class="list-none space-y-0.5 text-xs" style="text-align: left; padding: 0; margin: 0;">
+                        <li style="text-align: left;"><a class="no-underline text-white hover:underline" href="">CONTACTA CON UN AGENTE</a></li>
+                        <li style="text-align: left;"><a class="no-underline text-white hover:underline" href="">TRABAJAR CON NOSOTROS</a></li>
+                        <li style="text-align: left;"><a class="no-underline text-white hover:underline" href="">GUIA DE AYUDA</a></li>
+                        <li style="text-align: left;"><a class="no-underline text-white hover:underline" href="">ASUNTOS LEGALES</a></li>
+                        <li style="text-align: left;"><a class="no-underline text-white hover:underline" href="">PQRS</a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <!-- SEPARATOR -->
+            <div class="border-t border-white my-6"></div>
+
+            <!-- BOTTOM SECTION: SOCIAL + COPYRIGHT + SIGNATURE -->
+            <div class="flex items-center justify-between px-9">
+                
+                <!-- Social Media -->
+                <div class="flex items-center gap-4">
+                    <span class="font-bold text-sm">SIGUENOS:</span>
+                    {Object.entries(socialIcons).map(([name, Icon]) => (
+                        <a href="/" aria-label={name} class="w-10 h-10 bg-white rounded-full flex items-center justify-center hover:bg-gray-200 transition">
+                            <Icon class="w-6 h-6 text-[#E75A3F]" />
+                        </a>
+                    ))}
+                </div>
+                
+                <!-- Copyright y Links -->
+                <div class="flex items-center gap-3 flex-1 justify-center">
+                    <span class="font-footer text-xs">
+                        © {new Date().getFullYear()} ELITESHOPONLINE TODOS LOS DERECHOS RESERVADOS
+                    </span>
+                    <span class="text-xs">—</span>
+                    <a href="/politics" class="no-underline text-white font-footer text-xs hover:underline">
+                        POLITICA DE PRIVACIDAD
+                    </a>
+                    <span class="text-xs">—</span>
+                    <a href="/services" class="no-underline text-white font-footer text-xs hover:underline">
+                        TERMINOS DE SERVICIOS
+                    </a>
+                </div>
+                
+                <span class="font-signature text-2xl">EliteShopOnline</span>
+
+            </div>
+        </div>
+    </div>
+</footer>

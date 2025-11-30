@@ -1,0 +1,109 @@
+---
+import Logo from "../assets/EliteShopOnline.webp"
+import User from "../assets/user.png"
+---
+
+<header class="w-full px-4 py-6">
+    <nav class="bg-[#E75A3F] rounded-full mr-8 mx-auto shadow-lg overflow-hidden" style="max-width: calc(100vw - 2rem);">
+        <div class="flex items-center justify-between px-6 lg:px-8 py-4 gap-4">
+            
+            <!-- Logo -->
+            <a href="/" class="shrink-0">
+                <img src={Logo.src} alt="EliteShopOnline Logo" class="w-16 h-16 lg:w-18 lg:h-18 object-contain hover:scale-105 transition-transform">
+            </a>
+
+            <!-- Navigation Links - Desktop -->
+            <ul class="hidden lg:flex items-center gap-6 xl:gap-8 list-none m-0 p-0">
+                <li>
+                    <a href="/" class="text-white font-aclonica text-lg xl:text-xl no-underline hover:opacity-80 transition-opacity drop-shadow-lg">
+                        INICIO
+                    </a>
+                </li>
+                <li>
+                    <a href="/products" class="text-white font-aclonica text-lg xl:text-xl no-underline hover:opacity-80 transition-opacity drop-shadow-lg">
+                        PRODUCTOS
+                    </a>
+                </li>
+                <li>
+                    <a href="/categories" class="text-white font-aclonica text-lg xl:text-xl no-underline hover:opacity-80 transition-opacity drop-shadow-lg">
+                        CATEGORÍAS
+                    </a>
+                </li>
+                <li>
+                    <a href="/about" class="text-white font-aclonica text-lg xl:text-xl no-underline hover:opacity-80 transition-opacity drop-shadow-lg">
+                        NOSOTROS
+                    </a>
+                </li>
+            </ul>
+
+            <!-- Search Bar - Desktop -->
+            <div class="hidden md:flex relative flex-1 max-w-xs lg:max-w-sm">
+                <svg xmlns="http://www.w3.org/2000/svg" class="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-600 pointer-events-none" width="16" height="16" viewBox="0 0 30 30">
+                    <path d="M 13 3 C 7.4889971 3 3 7.4889971 3 13 C 3 18.511003 7.4889971 23 13 23 C 15.396508 23 17.597385 22.148986 19.322266 20.736328 L 25.292969 26.707031 A 1.0001 1.0001 0 1 0 26.707031 25.292969 L 20.736328 19.322266 C 22.148986 17.597385 23 15.396508 23 13 C 23 7.4889971 18.511003 3 13 3 z M 13 5 C 17.430123 5 21 8.5698774 21 13 C 21 17.430123 17.430123 21 13 21 C 8.5698774 21 5 17.430123 5 13 C 5 8.5698774 8.5698774 5 13 5 z"></path>
+                </svg>
+                <input
+                    type="search"
+                    class="w-full rounded-full border-none pl-11 pr-4 py-2.5 lg:py-3 text-sm lg:text-base text-gray-700 bg-[#D5D5D5] placeholder-gray-600 focus:outline-none focus:ring-2 focus:ring-white/50 transition-all"
+                    placeholder="Buscar productos"
+                    aria-label="Buscar productos"
+                >
+            </div>
+
+            <!-- User Icon -->
+            <a href="/login" class="shrink-0 hover:scale-110 transition-transform" aria-label="Iniciar sesión">
+                <img src={User.src} alt="User Icon" class="w-10 h-10 lg:w-11 lg:h-11 object-contain">
+            </a>
+
+            <!-- Mobile Menu Button -->
+            <button 
+                id="mobile-menu-button"
+                class="lg:hidden text-white p-2 hover:bg-white/10 rounded-lg transition-colors"
+                aria-label="Menú"
+            >
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden lg:hidden border-t border-white/20">
+            <div class="flex flex-col gap-2 px-6 py-4">
+                <a href="/" class="text-white font-aclonica text-base py-2 hover:bg-white/10 rounded-lg px-3 transition-colors no-underline">
+                    INICIO
+                </a>
+                <a href="/products" class="text-white font-aclonica text-base py-2 hover:bg-white/10 rounded-lg px-3 transition-colors no-underline">
+                    PRODUCTOS
+                </a>
+                <a href="/categories" class="text-white font-aclonica text-base py-2 hover:bg-white/10 rounded-lg px-3 transition-colors no-underline">
+                    CATEGORÍAS
+                </a>
+                <a href="/about" class="text-white font-aclonica text-base py-2 hover:bg-white/10 rounded-lg px-3 transition-colors no-underline">
+                    NOSOTROS
+                </a>
+                <div class="pt-2">
+                    <div class="relative">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-600 pointer-events-none" width="16" height="16" viewBox="0 0 30 30">
+                            <path d="M 13 3 C 7.4889971 3 3 7.4889971 3 13 C 3 18.511003 7.4889971 23 13 23 C 15.396508 23 17.597385 22.148986 19.322266 20.736328 L 25.292969 26.707031 A 1.0001 1.0001 0 1 0 26.707031 25.292969 L 20.736328 19.322266 C 22.148986 17.597385 23 15.396508 23 13 C 23 7.4889971 18.511003 3 13 3 z M 13 5 C 17.430123 5 21 8.5698774 21 13 C 21 17.430123 17.430123 21 13 21 C 8.5698774 21 5 17.430123 5 13 C 5 8.5698774 8.5698774 5 13 5 z"></path>
+                        </svg>
+                        <input 
+                            type="search" 
+                            class="w-full rounded-full pl-11 pr-4 py-2 text-gray-700 bg-[#D5D5D5] placeholder-gray-600 border-none focus:outline-none focus:ring-2 focus:ring-white/50" 
+                            placeholder="Buscar productos"
+                        >
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<script>
+    // Mobile menu toggle
+    const menuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+    
+    menuButton?.addEventListener('click', () => {
+        mobileMenu?.classList.toggle('hidden');
+    });
+</script>
